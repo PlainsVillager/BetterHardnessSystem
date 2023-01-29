@@ -20,12 +20,10 @@ public class BHSMain implements ModInitializer {
 
     @Override
     public void onInitialize() {
-		ItemGroupEvents.modifyEntriesEvent(BHS_Group).register(content -> {
+        BHSRegistry.finalRegistry();
+        ItemGroupEvents.modifyEntriesEvent(BHS_Group).register(content -> {
 			content.add(BHSRegistry.BHSItems.BEDROCK_PICKAXE);
 		});
-
-        BHSRegistry.finalRegistry();
-
         LOGGER.info("这个傻逼logger能干什么啊");
     }
 }
